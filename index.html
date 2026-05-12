@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maqueta Responsive Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container"> <div class="logo">
+            <img src="PlusheShop.png" alt="PlusheShop Logo" class="logo-img">
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#contacto 1">Contacto 1</a></li>
+                <li><a href="#contacto 2">Contacto 2</a></li>
+                <li><a href="#contacto 3">Contacto 3</a></li>
+                <li><a href="#salir">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Peluches que enamoran🧸</h1>
+            <p>Encuentra el regalo perfecto para cada ocasión</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="servicios" class="grid-content">
+            <!-- Ejemplo de una tarjeta con botón y precio -->
+            <article class="card">
+                <img src="Prod-01.jpg" alt="Peluches" class="card-img">
+                <div class="card-info">
+                    <h3>Goku: Dragon Ball Plushe</h3>
+                    <p class="price">S/ 435.00</p>
+                    <button class="btn-add">Añadir al Carrito</button>
+                </div>
+            </article>
+            <!-- Repite esta estructura para los otros 5 servicios -->
+            <article class="card">
+                <img src="Prod-02.jpg" alt="Peluches" class="card-img">
+                <div class="card-info">
+                    <h3>Kirby: Kirby Plush</h3>
+                    <p class="price">S/ 315.00</p>
+                    <button class="btn-add">Añadir al Carrito</button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="Prod-04.jpg" alt="Peluches" class="card-img">
+                <div class="card-info">
+                    <h3>Peashooter: PVZ Plush</h3>
+                    <p class="price">S/ 230.00</p>
+                    <button class="btn-add">Añadir al Carrito</button>
+                </div>
+            </article>
+            
+            <!-- Nuevos 3 servicios agregados[cite: 3] -->
+            <article class="card">
+                <img src="Prod-03.jpg" alt="Servicio 4" class="card-img">
+                <div class="card-info">
+                    <h3>Meisho Doto: Umamusume Pretty Derby Plush</h3>
+                    <p class="price">S/ 200.00</p>
+                    <button class="btn-add">Añadir al Carrito</button>
+                </div>
+            </article>
+            <article class="card">
+                <img src="Prod-05.jpg" alt="Servicio 5" class="card-img">
+                <div class="card-info">
+                    <h3>Squirtle: Pokemon Plus</h3>
+                    <p class="price">S/ 138.00</p>
+                    <button class="btn-add">Añadir al Carrito</button>
+                </div>
+                
+            </article>
+            <article class="card">
+                <img src="Prod-06.jpg" alt="Servicio 6" class="card-img">
+                <div class="card-info">
+                    <h3>Baby Mario: Super Mario Bros Plush</h3>
+                    <p class="price">S/ 151.00</p>
+                    <button class="btn-add">Añadir al Carrito</button>
+                </div>
+                
+            </article>
+        </section>
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('open');
+        });
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('open');
+            });
+        });
+
+        
+
+        document.querySelectorAll('.btn-add').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.add('added');
+                btn.textContent = '¡Agregado!';
+                btn.disabled = true;
+            });
+        });
+        
+    </script>
+
+    <footer id="contacto" class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>PlusheShop</h3>
+                <p>Llevando ternura a tu hogar con los mejores peluches de anime y videojuegos.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="icon">📞</i> 996 677 232</li>
+                    <li><i class="icon">✉️</i> gamesdobu@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/mnnl.correaa/" target="_blank">Instagram</a>
+                    <a href="https://www.instagram.com/mattartisticc/" target="_blank">Profecional Account</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 - MC Corp. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
